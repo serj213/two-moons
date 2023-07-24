@@ -1,11 +1,12 @@
-const path = require("path");
-const webpack = require("webpack");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+import path from "path";
+import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
+import webpack, { Configuration } from "webpack";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
-module.exports = (env) => {
+module.exports = (env: any) => {
   const { mode } = env;
 
-  const config = {
+  const config: Configuration = {
     mode: mode,
     entry: path.resolve(__dirname, "src", "index.ts"),
     output: {
@@ -13,7 +14,7 @@ module.exports = (env) => {
       path: path.resolve(__dirname, "dist"),
       clean: true,
     },
-    devtool: 'inline-source-map',
+    devtool: "inline-source-map",
     devServer: {
       static: path.resolve(__dirname, "dist", "index.html"),
       port: 3000,
@@ -23,14 +24,14 @@ module.exports = (env) => {
       extensions: [".tsx", ".ts", ".js"],
     },
     module: {
-        rules: [
-          {
-            test: /\.tsx?$/,
-            use: 'ts-loader',
-            exclude: /node_modules/,
-          },
-        ],
-      },
+      rules: [
+        {
+          test: /\.tsx?$/,
+          use: "ts-loader",
+          exclude: /node_modules/,
+        },
+      ],
+    },
     plugins: [
       new HtmlWebpackPlugin({
         filename: "index.html",
