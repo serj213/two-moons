@@ -9,7 +9,7 @@ module.exports = (env: IBuildEnv) => {
 
   const paths: IBuildPath = {
     src: path.resolve(__dirname, "src"),
-    entry: path.resolve(__dirname, "index.tsx"),
+    entry: path.resolve(__dirname, "src", "index.tsx"),
     output: path.resolve(__dirname, "dist"),
     html: path.resolve(__dirname, "public", "index.html"),
   };
