@@ -10,6 +10,7 @@ import { IBuildOptions } from "./types/config";
 export const buildConfiguration = (options: IBuildOptions): Configuration => {
 
     const {mode, paths} = options
+    const isDev = mode === 'development'
 
 
     return {
@@ -24,7 +25,7 @@ export const buildConfiguration = (options: IBuildOptions): Configuration => {
         devServer: buildDevServer(),
         resolve: buildResolvers(),
         module: {
-          rules: buildLoaders(),
+          rules: buildLoaders(isDev),
         },
         plugins: buildPlugins(paths),
       }

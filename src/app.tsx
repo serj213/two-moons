@@ -1,16 +1,18 @@
-import React from "react";
+import { useState } from "react";
+import { Button } from "./Components/Button/Button";
+import './app.scss'
 
 export const App = () => {
-  const [counter, setCounter] = React.useState(0);
+  const [counter, setCounter] = useState(0);
 
   const increment = () => {
     setCounter((prev) => prev + 1);
   };
 
   return (
-    <div>
+    <div className='app'>
       Hello world
-      <button onClick={increment}>+</button>
+      <Button />
       <div>{counter}</div>
     </div>
   );
