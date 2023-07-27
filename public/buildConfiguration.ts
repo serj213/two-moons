@@ -23,7 +23,7 @@ export const buildConfiguration = (options: IBuildOptions): Configuration => {
         },
         devtool: "inline-source-map",
         devServer: buildDevServer(),
-        resolve: buildResolvers(),
+        resolve: buildResolvers(paths),
         module: {
           rules: buildLoaders(isDev),
         },
