@@ -1,17 +1,17 @@
-export type TBuildMode = "development" | "production";
+export type TBuildMode = 'development' | 'production';
 
 export interface IBuildPath {
-  entry: string;
-  output: string;
-  src: string;
-  html: string;
+  entry: string
+  output: string
+  src: string
+  html: string
 }
 
 export interface IBuildEnv {
-    mode: TBuildMode
+  mode: TBuildMode
 }
 
 export interface IBuildOptions {
-    paths: IBuildPath,
-    mode: TBuildMode
+  paths: IBuildPath
+  mode: TBuildMode
 }

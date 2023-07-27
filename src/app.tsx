@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Button } from "./Components/Button/Button";
+import { useState } from 'react';
+import { Button } from './Components/Button/Button';
 import './app.scss'
 
 export const App = () => {

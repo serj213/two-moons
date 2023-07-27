@@ -8,11 +8,12 @@
     "noImplicitAny": true,
     "module": "commonjs",
     "sourceMap": true,
-    "target": "es5",
+    "target": "esnext",
     "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
-     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "strictNullChecks": true,
   }
 }
