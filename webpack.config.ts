@@ -1,8 +1,8 @@
 import path from "path";
 import type { Configuration as DevServerConfiguration } from "webpack-dev-server";
 import { Configuration } from "webpack";
-import { buildConfiguration } from "./public/buildConfiguration";
-import { IBuildEnv, IBuildOptions, IBuildPath } from "./public/types/config";
+import { buildConfiguration } from "./config/buildConfiguration";
+import { IBuildEnv, IBuildOptions, IBuildPath } from "./config/types/config";
 
 module.exports = (env: IBuildEnv) => {
   const { mode } = env;

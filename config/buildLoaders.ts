@@ -33,5 +33,17 @@ export const buildLoaders = (isDev: boolean): RuleSetRule[] => {
     ],
   };
 
-  return [tsLoader, scssLoader];
+
+  const babelLoader = {
+    test: /\.m?js$/,
+    exclude: /node_modules/,
+    use: {
+      loader: "babel-loader",
+      options: {
+        presets: ['@babel/preset-env']
+      }
+    }
+  }
+
+  return [tsLoader, babelLoader, scssLoader];
 };
