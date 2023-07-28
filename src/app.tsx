@@ -12,7 +12,7 @@ export const App = () => {
   return (
     <div className='app'>
       Hello world
-      <Button />
+      <Button>sdfs</Button>
       <div>{counter}</div>
     </div>
   );

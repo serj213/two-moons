@@ -3,16 +3,16 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: ['plugin:react/recommended', 'standard-with-typescript'],
-  overrides: [
-    {
-      env: {
-        node: true
-      },
-      files: ['.eslintrc.{js,cjs},', './**/*.{ts,tsx}']
-    }
-  ],
-  parserOptions: { project: ['tsconfig.json'] },
+  extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:storybook/recommended'],
+  overrides: [{
+    env: {
+      node: true
+    },
+    files: ['.eslintrc.{js,cjs},', './**/*.{ts,tsx}']
+  }],
+  parserOptions: {
+    project: ['tsconfig.json']
+  },
   plugins: ['react'],
   rules: {
     '@typescript-eslint/consistent-type-imports': 'off',
