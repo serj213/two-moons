@@ -1,7 +1,11 @@
 import cls from './Button.module.scss';
 
-export const Button = () => {
+interface IButton {
+  children: React.ReactNode
+}
+
+export const Button = ({ children }: IButton) => {
   return <button className={cls.button}>
-        sdfsd
+        {children}
     </button>
 }
