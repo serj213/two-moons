@@ -24,5 +24,6 @@ module.exports = {
     'react/no-deprecated': 'off',
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/promise-function-async': 'off'
+
   }
 };
