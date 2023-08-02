@@ -5,7 +5,7 @@ import { buildConfiguration } from './config/buildConfiguration'
 import { IBuildEnv, IBuildOptions, IBuildPath } from './config/types/config'
 
 module.exports = (env: IBuildEnv) => {
-  const { mode } = env
+  const { mode, port } = env
 
   const paths: IBuildPath = {
     src: path.resolve(__dirname, 'src'),
@@ -16,7 +16,8 @@ module.exports = (env: IBuildEnv) => {
 
   const options: IBuildOptions = {
     paths,
-    mode
+    mode,
+    port
   }
 
   const config: Configuration = buildConfiguration(options)

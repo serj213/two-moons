@@ -1,9 +1,11 @@
-import path from 'path';
+import type { Configuration as DevServerConfiguration } from 'webpack-dev-server';
+import { IBuildOptions } from './types/config';
 
-export const buildDevServer = () => {
+export const buildDevServer = (options: IBuildOptions): DevServerConfiguration => {
   return {
-    static: path.resolve(__dirname, 'dist', 'index.html'),
-    port: 3000,
-    open: true
+    port: options.port,
+    open: true,
+    historyApiFallback: true,
+    hot: true
   };
 };

@@ -15,12 +15,12 @@ export const buildConfiguration = (options: IBuildOptions): Configuration => {
     mode,
     entry: paths.entry,
     output: {
-      filename: 'index.[contenthash].js',
+      filename: '[name].[contenthash].js',
       path: paths.output,
       clean: true
     },
     devtool: 'inline-source-map',
-    devServer: buildDevServer(),
+    devServer: buildDevServer(options),
     resolve: buildResolvers(paths),
     module: {
       rules: buildLoaders(isDev)
