@@ -1,23 +1,30 @@
 :root {
-    // font-sizes text
+  // font-sizes text
 
-    --fz-l: 20px;
-    --fz-m:15px;
-    --fz-xs:12px;
+  --fz-l: 20px;
+  --fz-m: 15px;
+  --fz-xs: 12px;
 
-    // font-sizes heading
-    --fz-heading-1:96px;
+  // font-sizes heading
+  --fz-heading-1: 96px;
 
+  // line height text
 
-    // weight
-    --fw-heading-1: 500;
-    --fw-basic:400;
+  --lh-base: 24px;
+  --fh-m: 21px;
+  --fh-xs: 18px;
 
-    // main pallete 
-    
-    --black: #070707;
-    --red:#E43A3A;
-    --white:#fff;
-    --grey:#BFBFBF;
-    
+  // line-height heading
+  --lh-heading-1: 102px;
+
+  // weight
+  --fw-heading-1: 500;
+  --fw-basic: 400;
+
+  // main pallete
+
+  --black: #070707;
+  --red: #e43a3a;
+  --white: #fff;
+  --grey: #bfbfbf;
 }
