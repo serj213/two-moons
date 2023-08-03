@@ -1,0 +1,24 @@
+.button{
+    display: inline-block;
+    color:var(--black);
+    font-size: var(--fz-l);
+    line-height: var(--lh-base);
+    font-weight: var(--fw-basic);
+}
+
+.default{
+    background-color: var(--white);
+    border-color:var(--black);
+    border-radius: var(--radius-l);
+    padding: 15px 10px;
+}
+
+.fullWidth{
+    display: block;
+    width: 100%;
+}
+
+.clear{
+    background-color: transparent;
+    border: none;
+}
