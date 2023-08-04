@@ -14,6 +14,5 @@ export default meta;
 type Story = StoryObj<typeof Text>;
 
 export const Default: Story = {
-  args: {
-  }
+  args: {}
 };

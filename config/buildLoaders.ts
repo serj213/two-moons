@@ -14,7 +14,7 @@ export const buildLoaders = (isDev: boolean): RuleSetRule[] => {
     exclude: /node_modules/
   };
 
-  const scssLoader = buildScssLoader(isDev)
+  const scssLoader = buildScssLoader(isDev);
 
   const babelLoader = {
     test: /\.m?js$/,
@@ -25,7 +25,7 @@ export const buildLoaders = (isDev: boolean): RuleSetRule[] => {
         presets: ['@babel/preset-env']
       }
     }
-  }
+  };
 
   return [tsLoader, babelLoader, scssLoader, fontsLoader];
 };

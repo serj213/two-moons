@@ -7,5 +7,5 @@ export const buildResolvers = (paths: IBuildPath): ResolveOptions => {
     modules: [paths.src, 'node_modules'],
     preferAbsolute: true,
     alias: {}
-  }
+  };
 };

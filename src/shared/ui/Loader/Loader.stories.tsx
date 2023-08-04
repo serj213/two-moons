@@ -11,6 +11,5 @@ export default meta;
 type Story = StoryObj<typeof Loader>;
 
 export const DefaultLoader: Story = {
-  args: {
-  }
+  args: {}
 };

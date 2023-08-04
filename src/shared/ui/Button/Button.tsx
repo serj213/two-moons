@@ -1,10 +1,10 @@
-import cn from 'classnames'
+import cn from 'classnames';
 import { ButtonHTMLAttributes, useEffect } from 'react';
-import cls from './Button.module.scss'
+import cls from './Button.module.scss';
 
 export enum EButtonTheme {
   default = 'default',
-  clear = 'clear'
+  clear = 'clear',
 }
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -21,9 +21,18 @@ export const Button = (props: IButtonProps) => {
     theme = EButtonTheme.clear,
     fullWidth,
     ...otherProps
-  } = props
+  } = props;
 
-  return <button data-testid='button' className={cn(cls.button, classNames, [cls[theme], { [cls.fullWidth]: fullWidth }])} {...otherProps}>
-    {children}
-  </button>;
+  return (
+    <button
+      data-testid="button"
+      className={cn(cls.button, classNames, [
+        cls[theme],
+        { [cls.fullWidth]: fullWidth }
+      ])}
+      {...otherProps}
+    >
+      {children}
+    </button>
+  );
 };

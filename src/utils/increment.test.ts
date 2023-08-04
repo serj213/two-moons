@@ -1,5 +1,5 @@
 import { describe, expect, test } from '@jest/globals';
-import { increment } from './increment'
+import { increment } from './increment';
 
 describe('sum', () => {
   test('increment', () => {

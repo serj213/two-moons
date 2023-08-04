@@ -8,8 +8,8 @@ import { buildResolvers } from './buildResolvers';
 import { IBuildOptions } from './types/config';
 
 export const buildConfiguration = (options: IBuildOptions): Configuration => {
-  const { mode, paths } = options
-  const isDev = mode === 'development'
+  const { mode, paths } = options;
+  const isDev = mode === 'development';
 
   return {
     mode,
@@ -26,5 +26,5 @@ export const buildConfiguration = (options: IBuildOptions): Configuration => {
       rules: buildLoaders(isDev)
     },
     plugins: buildPlugins(paths)
-  }
+  };
 };

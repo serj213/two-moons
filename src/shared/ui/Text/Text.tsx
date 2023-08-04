@@ -1,6 +1,6 @@
-import { FC } from 'react'
-import cn from 'classnames'
-import cls from './Text.module.scss'
+import { FC } from 'react';
+import cn from 'classnames';
+import cls from './Text.module.scss';
 
 interface ITextProps {
   classNames?: string
@@ -8,7 +8,7 @@ interface ITextProps {
 }
 
 export const Text: FC<ITextProps> = (props) => {
-  const { classNames, children } = props
+  const { classNames, children } = props;
 
   return <p className={cn(cls.text, classNames)}>{children}</p>;
 };

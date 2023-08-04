@@ -1,16 +1,16 @@
-import { AboutPage } from 'pages/AboutPage'
-import { MainPage } from 'pages/MainPage'
-import { RouteProps } from 'react-router-dom'
+import { AboutPage } from 'pages/AboutPage';
+import { MainPage } from 'pages/MainPage';
+import { RouteProps } from 'react-router-dom';
 
 enum ERoutePath {
   MAIN = 'main',
-  ABOUT = 'about'
+  ABOUT = 'about',
 }
 
 export const routerPath: Record<ERoutePath, string> = {
   [ERoutePath.MAIN]: '/',
   [ERoutePath.ABOUT]: '/about'
-}
+};
 
 export const routerConfig: Record<ERoutePath, RouteProps> = {
   [ERoutePath.MAIN]: {
@@ -21,4 +21,4 @@ export const routerConfig: Record<ERoutePath, RouteProps> = {
     path: routerPath.about,
     element: <AboutPage />
   }
-}
+};

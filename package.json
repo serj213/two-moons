@@ -13,7 +13,7 @@
     "unit": "jest --config ./config/jest/jest.config.ts",
     "storybook": "storybook dev -p 6006 -c ./config/storybook/",
     "build-storybook": "storybook build",
-    "server":"json-server --watch ./config/jsonServer/db.json  --port 8080"
+    "server": "json-server --watch ./config/jsonServer/db.json  --port 8080"
   },
   "repository": {
     "type": "git",
@@ -67,6 +67,7 @@
     "jest-environment-jsdom": "^29.6.2",
     "json-server": "^0.17.3",
     "mini-css-extract-plugin": "^2.7.6",
+    "prettier": "3.0.1",
     "react-test-renderer": "^18.2.0",
     "sass": "^1.64.1",
     "sass-loader": "^13.3.2",
