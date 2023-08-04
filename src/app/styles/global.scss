@@ -1,4 +1,6 @@
 body{
+    font-family: var(--fontName);
+    font-weight: var(--fw-basic);
     min-height: 100vh;
-    background-color: green;
+    background-color:var(--white);
 }
