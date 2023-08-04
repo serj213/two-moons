@@ -1,4 +1,4 @@
-import { Suspense } from 'react';
+import { Suspense, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { routerPath } from 'shared/config/router/routerConfig';
 import { AppRouter } from './providers/router';
