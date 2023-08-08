@@ -1,0 +1,17 @@
+.link{
+    display: inline-block;
+    text-decoration: none;
+    color:var(--black);
+    font-weight: var(--fw-basic);
+    font-size: var(--fz-m);
+    line-height: var(--lh-m);
+    border-bottom:1px solid transparent;
+    transition: border-bottom .2s linear;
+
+
+    @media(any-hover:hover){
+        &:hover{
+            border-bottom-color:var(--black);
+        }
+    }
+}

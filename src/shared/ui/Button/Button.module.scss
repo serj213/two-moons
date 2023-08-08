@@ -4,6 +4,7 @@
   font-size: var(--fz-l);
   line-height: var(--lh-base);
   font-weight: var(--fw-basic);
+  cursor: pointer;
 }
 
 .default {
@@ -21,4 +22,34 @@
 .clear {
   background-color: transparent;
   border: none;
+  border-bottom:1px solid transparent;
+  font-size: var(--fz-m);
+  line-height: var(--lh-m);
+
+  @media(any-hover:hover){
+    &:hover{
+      border-bottom-color: var(--black);
+    }
+  }
+}
+
+.basket{
+  background-color: transparent;
+  border:none;
+  font-size: var(--fz-m);
+  line-height: var(--lh-m);
+  
+  span{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 11px;
+    background-color: var(--black);
+    color:var(--white);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 100%;
+    font-size: var(--fz-m);
+  }
 }

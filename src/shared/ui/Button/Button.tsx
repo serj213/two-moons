@@ -5,6 +5,7 @@ import cls from './Button.module.scss';
 export enum EButtonTheme {
   default = 'default',
   clear = 'clear',
+  basket = 'basket'
 }
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -12,6 +13,7 @@ interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode
   theme?: EButtonTheme
   fullWidth?: boolean
+  countElem?: number
 }
 
 export const Button = (props: IButtonProps) => {
@@ -20,6 +22,7 @@ export const Button = (props: IButtonProps) => {
     classNames = '',
     theme = EButtonTheme.clear,
     fullWidth,
+    countElem,
     ...otherProps
   } = props;
 
@@ -33,6 +36,10 @@ export const Button = (props: IButtonProps) => {
       {...otherProps}
     >
       {children}
+
+      {
+        EButtonTheme.basket && <span>{countElem}</span>
+      }
     </button>
   );
 };
