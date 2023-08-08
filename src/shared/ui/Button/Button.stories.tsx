@@ -31,3 +31,37 @@ export const fullWidth: Story = {
     fullWidth: true
   }
 };
+
+export const basket: Story = {
+  args: {
+    theme: EButtonTheme.basket,
+    countElem: 0
+  }
+};
+
+export const basketWhite: Story = {
+  decorators: [
+    (Story) => (
+      <div style={{ height: '100vh', padding: 15, background: '#000' }}>
+        <Story />
+      </div>
+    )
+  ],
+  args: {
+    theme: EButtonTheme.basketWhite,
+    countElem: 0
+  }
+};
+
+export const whiteClear: Story = {
+  decorators: [
+    (Story) => (
+      <div style={{ height: '100vh', padding: 15, background: '#000' }}>
+        <Story />
+      </div>
+    )
+  ],
+  args: {
+    theme: EButtonTheme.whiteClear
+  }
+};

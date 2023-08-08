@@ -1,13 +1,15 @@
 import cn from 'classnames'
 import { Link } from 'react-router-dom';
 import { routerPath } from 'shared/config/router/routerConfig';
-import { Burger } from 'shared/ui/Burger/Burger';
+import { Burger, EBurgerTheme } from 'shared/ui/Burger/Burger';
 import { Button, EButtonTheme } from 'shared/ui/Button/Button';
 import { Container } from 'shared/ui/Container/Container';
-import { LinkItem } from 'shared/ui/LinkItem/LinkItem';
+import { ELinkTheme, LinkItem } from 'shared/ui/LinkItem/LinkItem';
 import LogoIcon from '../../../../public/img/logo.svg'
+import LogoWhiteIcon from '../../../../public/img/logo-white.svg'
 
 import cls from './Header.module.scss'
+import { headerLinkMenuItems } from '../utils/LinkMenuItems';
 
 export enum EHeaderTheme {
   white = 'white',
@@ -25,33 +27,33 @@ export const Header = (props: IHeaderProps) => {
     <Container>
         <div className={cls.header__inner}>
             <div className={cls.header__menu}>
-                <Burger click={() => {}} />
-                <LinkItem to={'/dsfsdf'}>
-                    Women
-                </LinkItem>
-                <LinkItem to={'/dsfsdf'}>
-                    Men
-                </LinkItem>
-                <LinkItem to={'/dsfsdf'}>
-                    Brand
-                </LinkItem>
+                <Burger theme={theme === EHeaderTheme.white ? EBurgerTheme.white : EBurgerTheme.black} click={() => {}} />
+                {
+                    headerLinkMenuItems.map(({ label, link }) => {
+                      return <LinkItem theme={theme === EHeaderTheme.white ? ELinkTheme.white : ELinkTheme.black} key={link} to={link}>
+                            {label}
+                        </LinkItem>
+                    })
+                }
             </div>
             <div>
                 <Link to={routerPath.main}>
-                    <LogoIcon />
+                    {
+                        theme === EHeaderTheme.white ? <LogoIcon /> : <LogoWhiteIcon />
+                    }
                 </Link>
             </div>
             <div className={cls.header__menu}>
-                <Button>
+                <Button theme={theme === EHeaderTheme.white ? EButtonTheme.clear : EButtonTheme.whiteClear }>
                     ITA
                 </Button>
-                <Button>
+                <Button theme={theme === EHeaderTheme.white ? EButtonTheme.clear : EButtonTheme.whiteClear }>
                     Search
                 </Button>
-                <Button>
+                <Button theme={theme === EHeaderTheme.white ? EButtonTheme.clear : EButtonTheme.whiteClear }>
                     Login/Registrazione
                 </Button>
-                <Button theme={EButtonTheme.basket} countElem={0}>
+                <Button theme={theme === EHeaderTheme.white ? EButtonTheme.basket : EButtonTheme.basketWhite} countElem={0}>
                     Bag
                 </Button>
             </div>

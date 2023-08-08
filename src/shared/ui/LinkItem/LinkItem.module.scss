@@ -15,3 +15,13 @@
         }
     }
 }
+
+.link.black {
+    color: var(--white);
+
+    @media(any-hover:hover){
+        &:hover{
+            border-bottom-color:var(--white);
+        }
+    }
+}

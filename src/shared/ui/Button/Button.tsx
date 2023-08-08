@@ -1,11 +1,13 @@
 import cn from 'classnames';
-import { ButtonHTMLAttributes, useEffect } from 'react';
+import { ButtonHTMLAttributes } from 'react';
 import cls from './Button.module.scss';
 
 export enum EButtonTheme {
   default = 'default',
   clear = 'clear',
-  basket = 'basket'
+  basket = 'basket',
+  whiteClear = 'whiteClear',
+  basketWhite = 'basketWhite',
 }
 
 interface IButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

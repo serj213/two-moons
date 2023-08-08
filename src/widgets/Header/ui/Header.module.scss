@@ -28,4 +28,11 @@
 
 .black{
     background-color: var(--black); 
+
+    .header{
+        &__inner{
+            border-bottom-color:var(--white);
+        }
+    }
+
 }
